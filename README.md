@@ -62,7 +62,3 @@ PowerShell Empire mod to post-exploit the World!
     cd ..
     ./empire
 
-![empire_mod_hackplayers.png logo](./empire_mod_hackplayers.png)  
-
-# Video Demo
-[![Demo Video](./img/main.png)](https://www.youtube.com/watch?v=vp721ZhiQOo)
