@@ -1,6 +1,6 @@
 # Empire-mod-Hackplayers
 
-PowerShell Empire mod to post-exploit the World!
+PowerShell Empire mod to post-exploit the World! Linux, MacOS, Windows.
 
        ====================================================================================
         Empire: PowerShell post-exploitation agent | [Version]: 2.0 Mod: HackPlayers 
